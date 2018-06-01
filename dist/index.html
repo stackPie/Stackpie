@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+    <title>Getting Started</title>
+</head>
+<body>
+
+<script src="stackpie.min.js"></script>
+<script>
+
+    let sp = new StackPie('p_live_ySjPIuuiuJJ5Hoim7M9uMLwjO',{
+        url: 'http://sapp.test/api/v2/'
+    });
+
+    sp.clientAuth({
+        username: 'razib@stackpie.com',
+        password: '123456'
+    }).then(function (result) {
+
+
+
+        if(result.success){
+            console.log(result);
+        }
+        else{
+            console.log(result.message);
+        }
+
+    }).catch(function (error) {
+        console.log(error);
+    });
+    
+</script>
+</body>
+</html>
